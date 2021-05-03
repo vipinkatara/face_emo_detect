@@ -1,7 +1,7 @@
 import requests
 
 # server url
-URL = "http://127.0.0.1:5000/predict"
+URL = "http://104.211.73.222:8080/predict"
 
 if __name__ == "__main__":
     # open files
@@ -10,7 +10,7 @@ if __name__ == "__main__":
     url = {'url':'https://image.shutterstock.com/image-photo/portrait-sad-man-260nw-126009806.jpg'}
     # package stuff to send and perform POST request
     values = url
-    print(type(values))
+    # print(type(values))
     response = requests.post(URL, json=values)
     data = response.json()
 
